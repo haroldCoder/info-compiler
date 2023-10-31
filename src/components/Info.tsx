@@ -30,7 +30,18 @@ export default function Info() {
       emailto: email,
       emailfrom: data.email,
       info: data
-    }).then((res)=>console.log(res.data)
+    }).then((res)=>{
+      console.log(res.data)
+      setData((prev)=>({
+        ...prev,
+        name: "",
+        email: "",
+        country: "Country",
+        city: "",
+        adress: "",
+        phone: ""
+      }))
+    }
     )
   }
 
